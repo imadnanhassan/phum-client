@@ -13,9 +13,9 @@ export default function Login() {
       password: "admin12345",
     },
   });
-  const [login, { error }] = useLoginMutation();
+  const [login] = useLoginMutation();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: { userId: string; password: string }) => {
     const userInfo = {
       id: data.userId,
       password: data.password,
