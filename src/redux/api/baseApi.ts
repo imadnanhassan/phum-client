@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   BaseQueryApi,
   BaseQueryFn,
@@ -66,3 +67,4 @@ export const baseApi = createApi({
   baseQuery: baseQueryWithRefreshToken,
   endpoints: () => ({}),
 });
+ 
