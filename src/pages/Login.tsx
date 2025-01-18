@@ -1,22 +1,20 @@
 import { Button, Row } from "antd";
 import { useLoginMutation } from "../redux/features/auth/authApi";
-import { useAppDispatch } from "../redux/hook";
 import { setUser, TUser } from "../redux/features/auth/authSlice.";
 import { verifyToken } from "../utils/verifyToken";
-import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import PHForm from "../components/form/PHForm";
 import PHInput from "../components/form/PHInput";
 import { FieldValues } from "react-hook-form";
 
 export default function Login() {
-  const navigate = useNavigate();
-  const dispatch = useAppDispatch();
+ 
   
   const defaultValues = {
     userId: "0001",
     password: "admin12345",
   };
+
   const [login] = useLoginMutation();
 
   const onSubmit = async (data: FieldValues) => {
