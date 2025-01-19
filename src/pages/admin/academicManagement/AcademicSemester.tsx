@@ -1,9 +1,11 @@
-import { useGetAllSemestersQuery } from "../../../redux/features/academicSemester/academicSemesterApi";
+import { useGetAllSemestersQuery } from "../../../redux/features/admin/academicManagement.api";
 
-export default function AcademicSemester() {
+const AcademicSemester = () => {
   const { data, isLoading } = useGetAllSemestersQuery({});
 
   if (isLoading) return <div>Loading...</div>;
   console.log(data);
   return <div>AcademicSemester</div>;
-}
+};
+
+export default AcademicSemester;

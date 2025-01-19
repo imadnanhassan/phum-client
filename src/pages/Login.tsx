@@ -6,10 +6,13 @@ import { toast } from "sonner";
 import PHForm from "../components/form/PHForm";
 import PHInput from "../components/form/PHInput";
 import { FieldValues } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../redux/hook";
 
 export default function Login() {
  
-  
+   const navigate = useNavigate();
+   const dispatch = useAppDispatch();
   const defaultValues = {
     userId: "0001",
     password: "admin12345",
